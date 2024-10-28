@@ -1,6 +1,6 @@
 import About from "@/components/About";
 import Hero from "@/components/Hero";
-import Myproject from "@/components/myproject";
+import Myproject from "@/components/Myproject";
 
 
 
