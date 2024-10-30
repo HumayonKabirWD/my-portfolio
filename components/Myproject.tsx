@@ -2,11 +2,34 @@
 
 import React from 'react'
 import Maxwidth from './Maxwidth'
-import {  BarChart3Icon, FileTextIcon, Github, MessageSquareIcon, MoveRightIcon } from 'lucide-react'
+import {  CodeXml, FileJson, Github, MonitorSmartphone, MoveRightIcon, Network } from 'lucide-react'
 import Image from 'next/image'
 import mor from '../public/morden0ui.png'
 import car from '../public/car-rental.png'
 import Link from 'next/link'
+
+const page = [
+  {
+    titel:"Responcive",
+    text:"Ability to create websites that look and function well on various devices (mobile, tablet, desktop).",
+    icon:<MonitorSmartphone/>
+  },
+  {
+    titel:"HTML & CSS Proficiency",
+    text:" Strong foundational skills in HTML and CSS, including CSS Grid, Flexbox, and animations.",
+    icon:<CodeXml/>
+  },
+  {
+    titel:"JavaScript (ES6+)",
+    text:"Advanced knowledge of JavaScript for creating dynamic, interactive web applications.",
+    icon:<FileJson/>
+  },
+  {
+    titel:"Frameworks & Libraries",
+    text:"Experience with popular frontend frameworks like React, Next.js, or Vue.js for building complex applications efficiently.",
+    icon:<Network/>
+  },
+]
 
 const Myproject = () => {
   return (
@@ -18,7 +41,7 @@ const Myproject = () => {
     <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
           {/* Box 1 */}
-          <div className="bg-white shadow-lg transition-all hover:shadow-xl">
+          <div className="max-w-sm mx-auto overflow-hidden rounded-xl shadow-lg bg-white">
             <Image className='p-2' src={mor} alt='mordarn ui'/>
             <div className="flex items-start justify-between mt-2">
               <Link className='py-2 px-3 bg-gradient-to-r from-violet-800 via-yellow-800 to-red-900 text-transparent bg-clip-text flex gap-4 font-bold' href="https://morden-ui-xi.vercel.app/">See full web <span className='text-red-950'> <MoveRightIcon/></span></Link>
@@ -27,52 +50,58 @@ const Myproject = () => {
           </div>
 
           {/* Box 2 */}
-          <div className=" bg-white shadow-lg transition-all hover:shadow-xl">
+          <div className="max-w-sm mx-auto overflow-hidden rounded-xl shadow-lg bg-white">
             <Image className='p-2' src={car} alt='mordarn ui'/>
             <div className="flex items-start justify-between mt-2">
-              <Link className='py-2 px-3  bg-gradient-to-r from-violet-800 via-yellow-800 to-red-900 text-transparent bg-clip-text flex gap-4 font-bold' href="https://morden-ui-xi.vercel.app/">See full web <span> <MoveRightIcon/></span></Link>
-              <Link className='py-2 px-3' href="https://github.com/HumayonKabirWD/Morden-UI"><Github/> </Link>
+            <Link className='py-2 px-3 bg-gradient-to-r from-violet-800 via-yellow-800 to-red-900 text-transparent bg-clip-text flex gap-4 font-bold' href="https://morden-ui-xi.vercel.app/">See full web <span className='text-red-950'> <MoveRightIcon/></span></Link>
+            <Link className='py-2 px-3 text-black' href="https://github.com/HumayonKabirWD/Morden-UI"><Github/> </Link>
             </div>
           </div>
 
           {/* Box 3 */}
-          <div className="bg-white rounded-xl shadow-lg p-6 transition-all hover:shadow-xl">
-            <div className="flex items-start justify-between">
-              <div>
-                <h3 className="text-lg font-semibold mb-2">Documents</h3>
-                <p className="text-gray-600">File analytics</p>
-                <div className="mt-4">
-                  <span className="text-2xl font-bold text-orange-500">156</span>
-                  <span className="text-red-500 text-sm ml-2">-3%</span>
-                </div>
-              </div>
-              <FileTextIcon className="h-6 w-6 text-orange-500" />
+          <div className="max-w-sm mx-auto overflow-hidden rounded-xl shadow-lg bg-white">
+            <Image className='p-2' src={car} alt='mordarn ui'/>
+            <div className="flex items-start justify-between mt-2">
+            <Link className='py-2 px-3 bg-gradient-to-r from-violet-800 via-yellow-800 to-red-900 text-transparent bg-clip-text flex gap-4 font-bold' href="https://morden-ui-xi.vercel.app/">See full web <span className='text-red-950'> <MoveRightIcon/></span></Link>
+            <Link className='py-2 px-3 text-black' href="https://github.com/HumayonKabirWD/Morden-UI"><Github/> </Link>
             </div>
           </div>
 
           {/* Box 4 */}
-          <div className="bg-white rounded-xl shadow-lg p-6 transition-all hover:shadow-xl">
-            <div className="flex items-start justify-between">
-              <div>
-                <h3 className="text-lg font-semibold mb-2">Statistics</h3>
-                <p className="text-gray-600">Performance data</p>
-                <div className="mt-4">
-                  <span className="text-2xl font-bold text-green-500">92%</span>
-                  <span className="text-green-500 text-sm ml-2">+5%</span>
-                </div>
-              </div>
-              <BarChart3Icon className="h-6 w-6 text-green-500" />
+          <div className="max-w-sm mx-auto overflow-hidden rounded-xl shadow-lg bg-white">
+            <Image className='p-2' src={mor} alt='mordarn ui'/>
+            <div className="flex items-start justify-between mt-2">
+            <Link className='py-2 px-3 bg-gradient-to-r from-violet-800 via-yellow-800 to-red-900 text-transparent bg-clip-text flex gap-4 font-bold' href="https://morden-ui-xi.vercel.app/">See full web <span className='text-red-950'> <MoveRightIcon/></span></Link>
+            <Link className='py-2 px-3 text-black' href="https://github.com/HumayonKabirWD/Morden-UI"><Github/> </Link>
             </div>
           </div>
         </div>
-        <div className="">
-            
+        <div className="flex flex-col p-2 rounded-xl">
+          <p className='text-5xl text-[#FFE9BC] md:text-6xl lg:text-6xl uppercase font-semibold'>frontend web developer </p>
+          <p className='flex items-center justify-center text-xl py-5 font-semibold text-[#FEBA71]'>skill</p>
+          <div className="">
+            {/* skill part  */}
+            <div className="grid grid-cols-2 gap-y-8 mt-5">
+              {page.map((item,i) =>(
+                <div className="text-center md:flex md:items-start md:text-left lg:block lg:text-center" key={i}>
+                  <div className="md:flex-shrink-0 flex justify-center">
+                    <div className="h-16 w-16 flex items-center justify-center rounded-full bg-yellow-100 text-yellow-900">
+                      {item.icon}
+                    </div>
+                  </div>
+                  <div className="mt-6 md:ml-4 md:mt-0 lg:ml-0 lg:mt-6">
+                <h3 className="font-medium">{item.titel}</h3>
+                <p className="mt-3 text-sm text-muted-foreground px-5">{item.text}</p>
+              </div>
+                </div>
+              ))}
+            </div>
+            </div>
+          </div>
         </div>
     </div>
-        
-      </div>
     </div>
-    </Maxwidth>
+  </Maxwidth>
     
   )
 }
