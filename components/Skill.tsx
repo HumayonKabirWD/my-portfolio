@@ -25,7 +25,6 @@ const Skill = () => {
             </div>
           </div>
         </div>
-        <div className=""></div>
     </Maxwidth>
   )
 }

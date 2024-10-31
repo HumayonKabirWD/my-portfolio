@@ -2,7 +2,7 @@
 
 import React from 'react'
 import Maxwidth from './Maxwidth'
-import {  CodeXml, FileJson, Github, MonitorSmartphone, MoveRightIcon, Network } from 'lucide-react'
+import {  CodeXml, FileJson, Github, Layers, MonitorSmartphone, MoveRightIcon, Network } from 'lucide-react'
 import Image from 'next/image'
 import mor from '../public/morden0ui.png'
 import car from '../public/car-rental.png'
@@ -29,10 +29,21 @@ const page = [
     text:"Experience with popular frontend frameworks like React, Next.js for building complex applications efficiently.",
     icon:<Network/>
   },
+  {
+    title:"UI/UX Best Practices",
+    text:" Understanding of user-centered design principles for improving usability and accessibility.",
+    icon:<Layers/>
+  },
+  {
+    title:"Version Control",
+    text:"Proficiency in Git and GitHub for collaboration and project management.",
+    icon:<Github/>
+  },
 ]
 
 const Myproject = () => {
   return (
+  <div id='project'> 
     <Maxwidth className='mt-72 lg:mt-10'>
         <div className="w-full max-w-7xl mx-auto space-y-8">
       {/* Second Grid - 4 Box Layout */}
@@ -93,12 +104,12 @@ const Myproject = () => {
           </div>
 
         </div>
-        <div className="flex flex-col items-center justify-center">
+        <div className="flex flex-col">
           <p className='ml-3 text-5xl bg-gradient-to-tr from-white via-yellow-700 to-white text-transparent bg-clip-text md:text-6xl lg:text-6xl uppercase font-semibold'>frontend web developer </p>
-          <p className='flex items-center justify-center text-xl py-5 font-semibold text-[#FEBA71]'>skill</p>
           <div>
+
             {/* skill part  */}
-            <div className="grid grid-cols-2 gap-y-8 mt-10">
+            <div className="grid grid-cols-2 gap-y-8 mt-5">
               {page.map((item,i) =>(
                 <div className="text-center md:flex md:items-start md:text-left lg:block lg:text-center" key={i}>
                   <div className="md:flex-shrink-0 flex justify-center">
@@ -119,7 +130,7 @@ const Myproject = () => {
     </div>
     </div>
   </Maxwidth>
-    
+  </div>  
   )
 }
 

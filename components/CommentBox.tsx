@@ -34,8 +34,8 @@ const CommentBox = () => {
   };
 
   return (
-    <div className="max-w-lg mx-auto p-6 rounded-lg shadow-md">
-      <h2 className="text-2xl font-bold mb-4 text-[#CFAF80]">Leave a Comment</h2>
+    <div className="max-w-lg mx-auto mt-2 rounded-lg shadow-md">
+      <h2 className="text-2xl font-bold mb-8 text-[#CFAF80]">Leave a Comment</h2>
       
       <form onSubmit={handleSubmit} className="space-y-4">
         <div className='flex items-center'>

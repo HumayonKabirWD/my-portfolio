@@ -26,8 +26,8 @@ const Hero = () => {
                 <Image className='mt-10 lg:mt-6 object-cover rounded-full h-40 w-40 shadow-lg shadow-white' src={kabir} alt='profile'/>
                 <p className='mt-5 lg:mt-10 text-4xl font-bold uppercase '>devloper</p>
                 <div className="flex gap-10 font-bold mt-5 lg:mt-16 w-full">
-                    <button className='px-5 py-2 rounded-[8px] bg-gradient-to-tr from-black via-yellow-900 to-black uppercase text-gray-300 hover:text-white text-sm'>project</button>
-                    <button className='px-6 py-2 rounded-[8px] border-2 border-yellow-900 uppercase hover:text-white text-gray-300 text-sm'>about me</button>
+                    <Link href="#project" className='px-5 py-2 rounded-[8px] bg-gradient-to-tr from-black via-yellow-900 to-black uppercase text-gray-300 hover:text-white text-sm'>project</Link>
+                    <Link href="#contact" className='px-6 py-2 rounded-[8px] border-2 border-yellow-900 uppercase hover:text-white text-gray-300 text-sm'>contact me</Link>
                 </div>
               </div>  
               <div className="hidden ml-0 lg:ml-5 lg:grid md:grid-cols-3 pr-10 pt-10 md:mt-56 lg:mt-64 gap-8 items-center">
@@ -35,7 +35,7 @@ const Hero = () => {
                     <Image className='h-10 w-10' src={html} alt='react'/>
                     <p className='font-semibold py-3'>HTML</p>
                 </Link>
-                <Link href="https://www.w3schools.com/html/html_computercode_elements.asp">
+                <Link href="https://www.javascript.com/">
                     <Image className='h-10 w-10 ml-4' src={java} alt='javascript'/>
                     <p className='font-semibold py-3'>javaScript</p>
                 </Link>

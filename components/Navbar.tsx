@@ -11,8 +11,8 @@ const Navbar = () => {
             </div>
             <div className="flex gap-3 lg:gap-8  font-bold uppercase text-sm text-gray-300">
               <Link href="/">home</Link>
-              <Link href="/">project</Link>
-              <Link href="/">about</Link>
+              <Link href="#project">project</Link>
+              <Link href="#about">about</Link>
             </div>
         </div>
     </Maxwidth>
