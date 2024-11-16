@@ -9,10 +9,10 @@ const Navbar = () => {
             <div className="font-bold text-2xl bg-gradient-to-tr from-white via-yellow-700 to-white text-transparent bg-clip-text">
                 <Link href="/">Humayon kabir</Link>
             </div>
-            <div className="flex gap-3 lg:gap-8  font-bold uppercase text-sm text-gray-300">
-              <Link className='hover:scale-105' href="/">home</Link>
-              <Link className='hover:scale-105' href="#project">project</Link>
-              <Link className='hover:scale-105' href="#about">about</Link>
+            <div className="flex gap-2  font-bold uppercase text-sm ">
+              <Link className='hover:scale-105 py-2 px-3 hover:bg-[#343333] rounded-xl' href="/">home</Link>
+              <Link className='hover:scale-105 py-2 px-3 hover:bg-[#343333] rounded-xl' href="#project">project</Link>
+              <Link className='hover:scale-105 py-2 px-3 hover:bg-[#343333] rounded-xl' href="#about">about</Link>
             </div>
         </div>
     </Maxwidth>
