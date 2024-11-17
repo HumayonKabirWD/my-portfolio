@@ -1,3 +1,5 @@
+"use client"
+
 import React, { useState } from 'react';
 import { Send } from 'lucide-react';
 
@@ -7,7 +9,7 @@ const CommentBox = () => {
   const [comment, setComment] = useState('');
   const [status, setStatus] = useState('');
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e :any) => {
     e.preventDefault();
     setStatus('sending');
 
