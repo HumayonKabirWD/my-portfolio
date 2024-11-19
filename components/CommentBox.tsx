@@ -30,7 +30,7 @@ const CommentBox = () => {
       } else {
         setStatus('error');
       }
-    } catch (_) {  // Using underscore to indicate intentionally unused parameter
+    } catch {  // Completely remove the parameter
       setStatus('error');
     }
   };
