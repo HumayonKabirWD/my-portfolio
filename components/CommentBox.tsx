@@ -3,8 +3,6 @@
 import React, { useState } from 'react';
 import { Send } from 'lucide-react';
 
-
-
 const CommentBox = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -15,74 +13,76 @@ const CommentBox = () => {
     e.preventDefault();
     setStatus('sending');
 
-    // try {
-    //   const response = await fetch('/api/send-comment', {
-    //     method: 'POST',
-    //     headers: {
-    //       'Content-Type': 'application/json',
-    //     },
-    //     body: JSON.stringify({ name, email, comment }),
-    //   });
+    try {
+      const response = await fetch('/api/send-comment', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ name, email, comment }),
+      });
 
-    //   if (response.ok) {
-    //     setStatus('success');
-    //     setName('');
-    //     setEmail('');
-    //     setComment('');
-    //   } else {
-    //     setStatus('error');
-    //   }
-    // } catch (error) {
-    //   setStatus('error');
-    // }
+      if (response.ok) {
+        setStatus('success');
+        setName('');
+        setEmail('');
+        setComment('');
+      } else {
+        setStatus('error');
+      }
+    } catch (error) {
+      setStatus('error');
+    }
   };
 
   return (
-    <div className="max-w-lg mx-auto mt-2 rounded-lg shadow-md">
-      <h2 className="text-2xl font-bold mb-8 text-[#CFAF80]">Leave a Comment</h2>
-      
+    <div className="max-w-lg mx-auto mt-8 p-6 shadow-md bg-black border-2 rounded-xl">
+      <h2 className="text-2xl font-bold mb-6 text-amber-700 dark:text-amber-500">
+        Leave a Comment
+      </h2>
+
       <form onSubmit={handleSubmit} className="space-y-4">
-        <div className='flex items-center'>
-          <label htmlFor="name" className="block text-sm mb-1 mr-2 font-semibold">
+        <div className="flex flex-col gap-1">
+          <label htmlFor="name" className="text-sm font-semibold">
             Name
           </label>
           <input
-            placeholder='Your Name ..'
+            placeholder="Your Name"
             type="text"
             id="name"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            className="w-full bg-black rounded-xl px-3 py-2 border-2 border-gray-300 focus:outline-none"
+            className="w-full rounded-lg px-3 py-2 border border-gray-600 bg-black focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             required
           />
         </div>
 
-        <div className='flex items-center'>
-          <label htmlFor="email" className="block text-sm mb-1 mr-2 font-semibold">
+        <div className="flex flex-col gap-1">
+          <label htmlFor="email" className="text-sm font-semibold">
             Email
           </label>
           <input
-            placeholder='Your Email ..'
+            placeholder="Your Email"
             type="email"
             id="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="w-full bg-black rounded-xl px-3 py-2 border-2 border-gray-300 focus:outline-none"
+            className="w-full rounded-lg px-3 py-2 border border-gray-600 bg-black focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             required
           />
         </div>
 
-        <div>
-          <label htmlFor="comment" className="block text-sm mb-1 mr-2 font-semibold">
+        <div className="flex flex-col gap-1">
+          <label htmlFor="comment" className="text-sm font-semibold">
             Comment
           </label>
           <textarea
-            placeholder='Please leave a comment ..'
+            placeholder="Please leave a comment"
             id="comment"
             value={comment}
             onChange={(e) => setComment(e.target.value)}
             rows={4}
-            className="w-full bg-black rounded-xl px-3 py-2 border-2 border-gray-300 focus:outline-none"
+            className="w-full rounded-lg px-3 py-2 border  border-gray-600 bg-black focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             required
           />
         </div>
@@ -90,17 +90,21 @@ const CommentBox = () => {
         <button
           type="submit"
           disabled={status === 'sending'}
-          className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 flex items-center justify-center gap-2 disabled:opacity-50"
+          className="w-full bg-amber-700 text-white font-semibold py-2 px-4 rounded-lg hover:bg-amber-800 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
         >
-          <Send size={18} />
+          <Send className="h-4 w-4" />
           {status === 'sending' ? 'Sending...' : 'Send Comment'}
         </button>
 
         {status === 'success' && (
-          <p className="text-green-600 text-sm">Comment sent successfully!</p>
+          <p className="text-green-600 dark:text-green-400 text-sm">
+            Comment sent successfully!
+          </p>
         )}
         {status === 'error' && (
-          <p className="text-red-600 text-sm">Failed to send comment. Please try again.</p>
+          <p className="text-red-600 dark:text-red-400 text-sm">
+            Failed to send comment. Please try again.
+          </p>
         )}
       </form>
     </div>
