@@ -9,7 +9,7 @@ const CommentBox = () => {
   const [comment, setComment] = useState('');
   const [status, setStatus] = useState('');
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus('sending');
 
@@ -30,13 +30,13 @@ const CommentBox = () => {
       } else {
         setStatus('error');
       }
-    } catch (error) {
+    } catch (_) {  // Using underscore to indicate intentionally unused parameter
       setStatus('error');
     }
   };
 
   return (
-    <div className="max-w-lg mx-auto mt-8 p-6 shadow-md bg-black border-2 rounded-xl">
+    <div className="max-w-lg mx-auto mt-8 p-6 rounded-xl shadow-md bg-black border-2">
       <h2 className="text-2xl font-bold mb-6 text-amber-700 dark:text-amber-500">
         Leave a Comment
       </h2>
@@ -52,7 +52,7 @@ const CommentBox = () => {
             id="name"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            className="w-full rounded-lg px-3 py-2 border border-gray-600 bg-black focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className="w-full rounded-lg px-3 py-2 border border-gray-700 bg-black focus:ring-2 focus:ring-amber-500 focus:border-transparent"
             required
           />
         </div>
@@ -67,7 +67,7 @@ const CommentBox = () => {
             id="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="w-full rounded-lg px-3 py-2 border border-gray-600 bg-black focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className="w-full rounded-lg px-3 py-2 border border-gray-700  bg-black focus:ring-2 focus:ring-amber-500 focus:border-transparent"
             required
           />
         </div>
@@ -82,7 +82,8 @@ const CommentBox = () => {
             value={comment}
             onChange={(e) => setComment(e.target.value)}
             rows={4}
-            className="w-full rounded-lg px-3 py-2 border  border-gray-600 bg-black focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className="w-full rounded-lg px-3 py-2 border border-gray-3
+            700 bg-black focus:ring-2 focus:ring-amber-500 focus:border-transparent"
             required
           />
         </div>
@@ -90,7 +91,7 @@ const CommentBox = () => {
         <button
           type="submit"
           disabled={status === 'sending'}
-          className="w-full bg-amber-700 text-white font-semibold py-2 px-4 rounded-lg hover:bg-amber-800 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+          className="w-full bg-amber-700 text-white py-2 px-4 rounded-lg hover:bg-amber-800 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
         >
           <Send className="h-4 w-4" />
           {status === 'sending' ? 'Sending...' : 'Send Comment'}
