@@ -36,7 +36,7 @@ const About = () => {
         </div>
         <p className='text-3xl font-semibold mt-10'>Get in Touch</p>
         <div className="grid grid-cols-1 lg:grid-cols-2  gap-x-10 my-10">
-          <p className='mt-10 text-muted-foreground text-lg'>If you're looking for a dedicated developer to bring your vision to life, feel free to reach out. I'm always open to new opportunities and exciting collaborations.</p>
+          <p className='mt-10 text-muted-foreground text-lg'>If you{"'"}re looking for a dedicated developer to bring your vision to life, feel free to reach out. I{"'"}m always open to new opportunities and exciting collaborations.</p>
           <ul className='mt-10 gap-5 font-medium'>
             <li className='flex text-xl gap-3'><Check/> Figma to Code</li>
             <li className='flex text-xl gap-3'><Check />Scratch to Modern Web</li>

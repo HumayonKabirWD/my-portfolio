@@ -9,7 +9,7 @@ const CommentBox = () => {
   const [comment, setComment] = useState('');
   const [status, setStatus] = useState('');
 
-  const handleSubmit = async (e :any) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus('sending');
 
