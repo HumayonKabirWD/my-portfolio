@@ -9,6 +9,7 @@ import real from '../public/Realstate site.png'
 import photo from '../public/PHOTO GALLERY.png'
 import sta from '../public/stuning.png'
 import car from '../public/carrent.png'
+import todo from '../public/TO DO LIST.png'
 import Link from 'next/link'
 
 const page = [
@@ -44,7 +45,7 @@ const page = [
   },
 ]
 
-const Myproject = () => {
+const Myobject = () => {
   return (
   <div id='project'> 
     <Maxwidth className='mt-72 lg:mt-10'>
@@ -56,7 +57,7 @@ const Myproject = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-7">
           {/* Box 1 */}
           <div className="max-w-sm max-h-min mx-auto overflow-hidden rounded-xl shadow-lg bg-white image">
-            <Image className='p-2' src={mor} alt='mordarn ui'/>
+            <Image className='p-2' src={mor} alt='ui'/>
             <div className="flex items-start justify-between my-2">
               <Link className='py-2 px-3 bg-gradient-to-r from-violet-800 via-yellow-800 to-red-900 text-transparent bg-clip-text flex gap-4 font-bold hover:text-black' href="https://morden-ui-xi.vercel.app/">See full web <span className='text-red-950'> <MoveRightIcon/></span></Link>
               <Link className='py-2 px-3 text-black' href="https://github.com/HumayonKabirWD/Morden-UI"><Github/> </Link>
@@ -65,7 +66,7 @@ const Myproject = () => {
 
           {/* Box 2 */}
           <div className="max-w-sm max-h-min mx-auto overflow-hidden rounded-xl shadow-lg bg-white image">
-            <Image className='p-2' src={sta} alt='mordarn ui'/>
+            <Image className='p-2' src={sta} alt='ui'/>
             <div className="flex items-start justify-between my-2 ">
             <Link className='py-2 px-3 bg-gradient-to-r from-violet-800 via-yellow-800 to-red-900 text-transparent bg-clip-text flex gap-4 font-bold hover:text-black' href="https://conva-crp.vercel.app/">See full web <span className='text-red-950'> <MoveRightIcon/></span></Link>
             <Link className='py-2 px-3 text-black' href="https://github.com/HumayonKabirWD/conva-crp"><Github/> </Link>
@@ -74,7 +75,7 @@ const Myproject = () => {
 
           {/* Box 3 */}
           <div className="max-w-sm max-h-min mx-auto overflow-hidden rounded-xl shadow-lg bg-white image">
-            <Image className='p-2' src={real} alt='mordarn ui'/>
+            <Image className='p-2' src={real} alt='real ui'/>
             <div className="flex items-start justify-between my-2">
             <Link className='py-2 px-3 bg-gradient-to-r from-violet-800 via-yellow-800 to-red-900 text-transparent bg-clip-text flex gap-4 font-bold hover:text-black' href="https://val-realested.vercel.app/">See full web <span className='text-red-950'> <MoveRightIcon/></span></Link>
             <Link className='py-2 px-3 text-black' href="https://github.com/HumayonKabirWD/val-realested"><Github/> </Link>
@@ -83,7 +84,7 @@ const Myproject = () => {
 
           {/* Box 4 */}
           <div className="max-w-sm max-h-min mx-auto overflow-hidden rounded-xl shadow-lg bg-white image">
-            <Image className='p-2' src={car} alt='mordarn ui'/>
+            <Image className='p-2' src={car} alt='car ui'/>
             <div className="flex items-start justify-between my-2">
             <Link className='py-2 px-3 bg-gradient-to-r from-violet-800 via-yellow-800 to-red-900 text-transparent bg-clip-text flex gap-4 font-bold hover:text-black' href="https://car-rent-delta-snowy.vercel.app/">See full web <span className='text-red-950'> <MoveRightIcon/></span></Link>
             <Link className='py-2 px-3 text-black' href="https://github.com/HumayonKabirWD/car_rent"><Github/> </Link>
@@ -91,7 +92,7 @@ const Myproject = () => {
           </div>
           {/* Box 5 */}
           <div className="max-w-sm max-h-min mx-auto overflow-hidden rounded-xl shadow-lg bg-white image">
-            <Image className='p-2' src={photo} alt='mordarn ui'/>
+            <Image className='p-2' src={photo} alt='photo ui'/>
             <div className="flex items-start justify-between my-2">
             <Link className='py-2 px-3 bg-gradient-to-r from-violet-800 via-yellow-800 to-red-900 text-transparent bg-clip-text flex gap-4 font-bold hover:text-black' href="https://photo-gallary-lete.vercel.app/">See full web <span className='text-red-950'> <MoveRightIcon/></span></Link>
             <Link className='py-2 px-3 text-black' href="https://github.com/HumayonKabirWD/photo-gallary/tree/main?tab=readme-ov-file"><Github/> </Link>
@@ -99,10 +100,10 @@ const Myproject = () => {
           </div>
           {/* Box 6 */}
           <div className="max-w-sm max-h-min mx-auto overflow-hidden rounded-xl shadow-lg bg-white image">
-            <Image className='p-2' src={mor} alt='mordarn ui'/>
+            <Image className='p-2' src={todo} alt='todo'/>
             <div className="flex items-start justify-between my-2">
-            <Link className='py-2 px-3 bg-gradient-to-r from-violet-800 via-yellow-800 to-red-900 text-transparent bg-clip-text flex gap-4 font-bold hover:text-black' href="https://morden-ui-xi.vercel.app/">See full web <span className='text-red-950'> <MoveRightIcon/></span></Link>
-            <Link className='py-2 px-3 text-black' href="https://github.com/HumayonKabirWD/Morden-UI"><Github/> </Link>
+            <Link className='py-2 px-3 bg-gradient-to-r from-violet-800 via-yellow-800 to-red-900 text-transparent bg-clip-text flex gap-4 font-bold hover:text-black' href="https://to-do-list-seven-eta-74.vercel.app/">See full web <span className='text-red-950'> <MoveRightIcon/></span></Link>
+            <Link className='py-2 px-3 text-black' href="https://github.com/HumayonKabirWD/to-do-list?tab=readme-ov-file"><Github/> </Link>
             </div>
           </div>
 
@@ -137,4 +138,4 @@ const Myproject = () => {
   )
 }
 
-export default Myproject
+export default Myobject

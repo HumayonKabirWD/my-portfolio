@@ -1,5 +1,4 @@
-// app/providers/LoadingProvider.tsx
-'use client';
+"use client"
 
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { usePathname, useSearchParams } from 'next/navigation';

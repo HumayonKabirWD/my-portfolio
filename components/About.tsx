@@ -13,7 +13,7 @@ import { Check } from 'lucide-react'
 
 const About = () => {
 
-  const year = new Date().getFullYear()
+
 
   const email = "kaabir24124@gmail.com"
 
@@ -59,9 +59,7 @@ const About = () => {
           <Image className='h-8 w-8' src={git} alt='github'/>
           </Link>
         </div>
-        <div className="flex items-center justify-center h-16 text-muted-foreground border-t-2 border-dark-900">
-          <p>&copy; {year} Humayon kabir </p>
-        </div>
+        
         
     </Maxwidth>
   </div>  

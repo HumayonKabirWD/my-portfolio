@@ -86,13 +86,13 @@ body {
 }
 
 .scale-up1 {
-  animation: scaleUp 3s ease-out forwards;
+  animation: scaleUp 2s ease-out forwards;
 }
 .scale-up2 {
-  animation: scaleUp 6s ease-out forwards;
+  animation: scaleUp 4s ease-out forwards;
 }
 .scale-up3 {
-  animation: scaleUp 8s ease-out forwards;
+  animation: scaleUp 6s ease-out forwards;
 }
 
 /* scale up down animation */

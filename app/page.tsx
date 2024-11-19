@@ -1,8 +1,7 @@
 
-
 import About from "@/components/About";
 import Hero from "@/components/Hero";
-import Myproject from "@/components/Myproject";
+import Myobject from "@/components/Myobject";
 import Skill from "@/components/Skill";
 import { LoadingProvider } from "./providers/LoadingProvider";
 
@@ -13,10 +12,10 @@ export default function Home () {
   return (
     <div>
       <LoadingProvider>
-      <Hero/>
-      <Myproject/>
-      <Skill/>
-      <About/>
+        <Hero/>
+        <Myobject/>
+        <Skill/>
+        <About/>
       </LoadingProvider>
     </div>
   );
