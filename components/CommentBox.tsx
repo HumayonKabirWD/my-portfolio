@@ -3,6 +3,8 @@
 import React, { useState } from 'react';
 import { Send } from 'lucide-react';
 
+
+
 const CommentBox = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -13,26 +15,26 @@ const CommentBox = () => {
     e.preventDefault();
     setStatus('sending');
 
-    try {
-      const response = await fetch('/api/send-comment', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ name, email, comment }),
-      });
+    // try {
+    //   const response = await fetch('/api/send-comment', {
+    //     method: 'POST',
+    //     headers: {
+    //       'Content-Type': 'application/json',
+    //     },
+    //     body: JSON.stringify({ name, email, comment }),
+    //   });
 
-      if (response.ok) {
-        setStatus('success');
-        setName('');
-        setEmail('');
-        setComment('');
-      } else {
-        setStatus('error');
-      }
-    } catch (error) {
-      setStatus('error');
-    }
+    //   if (response.ok) {
+    //     setStatus('success');
+    //     setName('');
+    //     setEmail('');
+    //     setComment('');
+    //   } else {
+    //     setStatus('error');
+    //   }
+    // } catch (error) {
+    //   setStatus('error');
+    // }
   };
 
   return (
