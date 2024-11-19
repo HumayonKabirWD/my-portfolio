@@ -96,13 +96,13 @@ const Navbar = () => {
                 HOME
               </Link>
               <Link
-                href="/services"
+                href="/configure/services"
                 className="block px-5 py-2  font-bold text-white hover:text-white hover:bg-yellow-900 rounded-[5px]"
               >
                 SERVICES
               </Link>
               <Link
-                href="/about"
+                href="/configure/about"
                 className="block px-5 py-2  font-bold text-white hover:text-white hover:bg-yellow-900 rounded-[5px]"
               >
                 ABOUT
